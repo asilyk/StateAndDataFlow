@@ -13,7 +13,7 @@ class TimeCounter: ObservableObject {
     var counter = 3
     var timer: Timer?
     var buttonTitle = "Start"
-    
+
     func startTimer() {
         if counter > 0 {
             timer = Timer.scheduledTimer(
@@ -26,7 +26,7 @@ class TimeCounter: ObservableObject {
         }
         buttonDidTapped()
     }
-    
+
     @objc private func updateCounter() {
         if counter > 0 {
             counter -= 1
@@ -36,12 +36,12 @@ class TimeCounter: ObservableObject {
         }
         objectWillChange.send(self)
     }
-    
+
     private func killTimer() {
         timer?.invalidate()
         timer = nil
     }
-    
+
     private func buttonDidTapped() {
         if buttonTitle == "Reset" {
             counter = 3

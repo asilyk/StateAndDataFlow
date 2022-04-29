@@ -11,7 +11,7 @@ import SwiftUI
 struct StateAndDataFlowApp: App {
     @StateObject private var userManager = UserManager()
     @StateObject private var storageManager = StorageManager()
-    
+
     var body: some Scene {
         WindowGroup {
             StarterView()

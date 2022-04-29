@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TimerButtonView: View {
     @ObservedObject var timer: TimeCounter
-    
+
     var body: some View {
         Button(action: { timer.startTimer() }) {
             Text(timer.buttonTitle)
