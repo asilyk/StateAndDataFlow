@@ -37,7 +37,7 @@ struct RegisterButtonView: View {
 
     private func updateName(with newValue: String) {
         nameLength = newValue.count
-        isNameValid = nameLength > 2 ? true : false
+        isNameValid = nameLength > 2
         counterColor = isNameValid ? .green : .red
         storageManager.updateStorage(with: newValue)
     }
@@ -46,9 +46,9 @@ struct RegisterButtonView: View {
 struct RegisterButtonView_Previews: PreviewProvider {
     static var previews: some View {
         RegisterButtonView(
-            userName: "",
             nameLength: .constant(0),
-            counterColor: .constant(.red)
+            counterColor: .constant(.red),
+            userName: ""
         )
     }
 }

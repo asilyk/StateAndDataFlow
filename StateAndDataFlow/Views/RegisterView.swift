@@ -22,9 +22,9 @@ struct RegisterView: View {
             }
             .padding()
             RegisterButtonView(
-                userName: userName,
                 nameLength: $nameLength,
-                counterColor: $counterColor
+                counterColor: $counterColor,
+                userName: userName
             )
         }
     }
