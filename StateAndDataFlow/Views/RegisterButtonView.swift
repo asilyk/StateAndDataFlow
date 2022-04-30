@@ -9,11 +9,12 @@ import SwiftUI
 
 struct RegisterButtonView: View {
     @State private var isNameValid = false
-    @Binding var userName: String
     @Binding var nameLength: Int
     @Binding var counterColor: Color
     @EnvironmentObject private var userManager: UserManager
     @EnvironmentObject private var storageManager: StorageManager
+
+    let userName: String
 
     var body: some View {
         Button(action: registerUser) {
@@ -45,7 +46,7 @@ struct RegisterButtonView: View {
 struct RegisterButtonView_Previews: PreviewProvider {
     static var previews: some View {
         RegisterButtonView(
-            userName: .constant(""),
+            userName: "",
             nameLength: .constant(0),
             counterColor: .constant(.red)
         )
