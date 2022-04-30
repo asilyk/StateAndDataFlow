@@ -24,8 +24,8 @@ struct RegisterButtonView: View {
             .onChange(of: userName) { newValue in
                 updateName(with: newValue)
             }
-            .disabled(!isNameValid)
         }
+        .disabled(!isNameValid)
     }
 
     private func registerUser() {
